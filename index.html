@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- stiker melayang -->
+     <img src="asset/foto2.jpg" class="floating-img img1" alt="Floating Image 1">
+    <img src="asset/foto3.png" class="floating-img img2" alt="Floating Image 2">
+    <img src="asset/Stiker5.gif" class="floating-img img3" alt="Floating Image 3">
+    
+    <!-- Gambar Surat yang Harus Diklik -->
+    <div id="suratContainer">
+        <img src="asset/pesan.png" alt="Surat Ucapan" id="suratGambar" onclick="bukaSurat()">
+    </div>
+    
+    <!-- Kartu 1 -->
+    <div class="popup-card active">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+            <img src="asset/Stiker1.gif" alt="gif" />
+            <p>Hallo Kakaa! 😊</p>
+            <button class="ok-btn" onclick="nextCard()">Lanjut</button>
+        </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="popup-card">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+            <img src="asset/Stiker3.gif" alt="" />
+            <p>Tebak, hari ini siapa yang ulang tahun? 🎂</p>
+            <button class="ok-btn" onclick="nextCard()">Lanjut</button>
+        </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="popup-card">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+            <img src="asset/Stiker2.gif" alt="" />
+            <p>Yaa betul, kamu! 🎉</p>
+            <button class="ok-btn" onclick="nextCard()">Lanjut</button>
+        </div>
+    </div>
+
+    <!-- Kartu 4 -->
+    <div class="popup-card">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+            <img src="asset/Stiker4.gif" alt="" />
+            <p>lanjut lagi, hehe ❤️</p>
+            <button class="ok-btn" onclick="nextCard()">Lanjut</button>
+        </div>
+    </div>
+    
+
+    <!-- Kartu 5 -->
+    
+    <div class="popup-card">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+          🎉🎂Selamat ulang tahun, sahabat terbaik akuu!🎂🎉
+<br />
+<br />
+          Haii kaka intan wijayanti! 🎈✨
+          Hari ini adalah hari spesial buat kamuu, akuu juga ga mau kelewatan ngucapin SELAMAT ULANG TAHUN! 🥳🥳 Semoga di usia kamuu baru ini, kamu di beri kesehatan, kekuatan, kesabaran, , dan di lancarkan rezekinya, di mudahkan segala urusannya, di wujudkan segala impian dan cita-cita nyaa, AAMIIIIN! 💖💫
+<br />
+<br />
+          ouh iyaa Akuu juga mau minta maaf selama ini banyak salah ke kamuu, suka nybelin, suka bikin kamu marah², gaa peka, selalu ngerepotin, dan mungkin jawab chat dari kamu lamaa atau gaa di bales 😅🙏. Kamu itu sahabat terbaik yang pernah adaa yang mau dengerin keluh kesah aku, dengerin cerita akuu meski pun ceritannya GJ, nemenin di saat susah, dan tetap sabar menghadapi keabsurd an akuu 🤣. Aku bersyukur banget bisaa bertemu kamuu! 🥰
+<br />
+<br />
+          Semoga kamu selalu dikelilingi orang-orang yang sayang dan peduli sama kamu 💕. Jangan lupa untuk tetap jadi diri sendiri, tetap ceria, tetap jadi INTAN WIJAYANTI (karena itu yang bikin seru! 🤭), dan jangan pernah menyerah untuk meraih mimpi-mimpimu! 🌟
+<br />
+<br />
+          Nikmati hari spesial ini ya! 🎂🎁🎊 Oh iya, jangan lupa traktiran, aku udah siap nih!  wkwkwk, becandaa gaa usa neraktir😜🍕🎉
+<br />
+<br />
+          Once again, Happy Birthday, Bestie! Love you! 💖🥳
+            <button class="ok-btn" onclick="nextCard()">Lanjut</button>
+        </div>
+    </div>
+    
+    <div class="popup-card">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+            <img src="asset/foto1.jpg" alt="" />
+            <p>Happy Birthday, Kakaa Intan Wijayanti 🎊</p>
+            <button class="ok-btn" onclick="nextCard()">Lanjut</button>
+        </div>
+    </div> 
+
+    <!-- Kartu 6 (Form Kirim Pesan ke WhatsApp) -->
+    <div class="popup-card">
+        <div class="popup-header">
+            <span class="close-btn">✖</span>
+        </div>
+        <div class="popup-content">
+            <p>Kirim pesan dong buat aku, biar aku gaa nyebelin lagi, dan harapan kakaa untuk kedepannya!  😊</p>
+            <textarea name="" id="pesan" rows="8" cols="40"placeholder="Isi pesan di sini, hehe..."></textarea>
+            <button class="ok-btn" onclick="kirimPesan()">Kirim</button>
+        </div>
+    </div>
+    
+    <!-- Custom Alert -->
+    <div id="custom-alert" class="alert-card">
+        <div class="alert-content">
+            <p id="alert-message">Pesan berhasil dikirim!</p>
+            <button class="ok-btn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+  
+  <!-- Audio Background -->
+<audio id="bg-music" autoplay loop>
+    <source src="asset/audio/sound.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung elemen audio.
+</audio>
+    <script src="script.js"></script>
+</body>
+  </html>
